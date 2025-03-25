@@ -254,7 +254,62 @@ C++ 기초 개념 정리
 
 - 참조자를 통해 해당 메모리 공간을 참조하게 되는데 함수를 빠져 나가면 함수 안에서 선언된 참조자는 소멸되지만, 참조자가 참조하는 변수는 사라지지 않는다.
 
- 
+### new & delete
+
+- 메모리 동적 할당 및 해제 방법
+
+    ```c++
+    int* ptr1 = new int;        // int형 변수의 할당
+
+    int* arr1 = new int[3]      // 길이가 3인 int형 배열의 할당
+
+    delete ptr1;                // int형 변수의 소멸
+
+    delete []arr1               // int형 배열의 소멸
+    ```
+- new 연산자로 할당된 메모리 공간은 **반드시 delete 함수 호출을 통해 소멸**해야한다!
+
+- **new & delete 와 malloc & free 의 차이점**
+
+    ```c++
+    #include <iostream>   // 입출력 스트림 라이브러리 포함
+    #include <stdlib.h>   // malloc, free 사용을 위한 표준 라이브러리 포함
+
+    class Simple        // Simple 클래스 정의
+    {
+    public:
+        Simple()    // 생성자
+        {
+            std::cout << "I'm simple constructor!" << std::endl;
+        }
+    };
+
+    int main(void)
+    {
+        // case 1: new 연산자를 이용한 객체 생성
+        cout << "case 1: ";
+        Simple * sp1 = new Simple;   // new는 객체를 생성하고 생성자를 자동 호출함
+
+        // case 2: malloc 함수 사용
+        cout << "case 2: ";
+        Simple * sp2 = (Simple*)malloc(sizeof(Simple) * 1); 
+        // malloc은 단순히 메모리만 할당하고, 생성자를 호출하지 않음
+
+        cout << endl << "end of main" << endl;
+
+        // 메모리 해제
+        delete sp1;    // delete는 메모리 해제 전에 소멸자 호출 (생성자도 호출되었기 때문)
+        free(sp2);     // free는 단순히 메모리를 해제하지만, 소멸자 호출 X
+
+        return 0;
+    }
+    ```
+    - malloc & free 는 생성자 및 소멸자가 호출되지 않음
+    - new는 객체 생성 시 생성자를 호출하며, delete는 소멸자를 호출함.
+    - 반면, malloc은 단순한 메모리 블록을 할당할 뿐, 객체의 생성자 호출을 하지 않음.
+
+
+
 ### Class
 
 - private
