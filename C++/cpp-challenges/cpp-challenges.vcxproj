@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Users\Admin\Desktop\main_250325(1).cpp" />
+    <ClCompile Include="..\..\..\..\Users\Admin\Desktop\main_250325.cpp" />
     <ClCompile Include="ptr_ref.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
