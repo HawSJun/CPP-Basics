@@ -33,6 +33,27 @@ public:
 			cerr << "MySQL Connection Failed!!" << e.what() << endl;
 		}
 	}
+	void Players() {
+		try {
+			unique_ptr<Statement> stmt(conn->createStatement());
+			unique_ptr<ResultSet> res(stmt->executeQuery("SELECT player_id, username, login_id, login_pw FROM players"));
+
+			while (res->next()) {
+				int id = res->getInt("player_id");
+				string name = res->getString("username");
+				string Login_Id = res->getString("login_id");
+				string Login_Pw = res->getString("login_pw");
+
+				cout << "ID: " << id
+					<< ", Name: " << name
+					<< ", Login ID: " << Login_Id
+					<< ", Login PW: " << Login_Pw << endl;
+			}
+		}
+		catch (SQLException& e) {
+			cerr << "Query Failed: " << e.what() << endl;
+		}
+	}
 	~MySQLConnector() {
 		cout << "MySQL Disconnection!!" << endl;
 	}
@@ -41,5 +62,6 @@ public:
 int main()
 {
 	MySQLConnector db(SERVER_IP, USERNAME, PASSWORD, DATABASE);
+	db.Players();
 	return 0;
 }
