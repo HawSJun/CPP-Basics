@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\변수">
+      <UniqueIdentifier>{9bf17369-3064-4b65-802e-99c3804f36d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\자료형">
+      <UniqueIdentifier>{18d8c2d9-d0e8-4a5c-bce0-38c5f8803e86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\배열">
+      <UniqueIdentifier>{bb3b46c2-7f79-4b2d-9a2e-56fad856219c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\사용자 입력 및 string">
+      <UniqueIdentifier>{553902f7-7d0f-4ba7-b7e4-57465e52d6b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\구조체">
+      <UniqueIdentifier>{622ad0d2-6622-4900-b199-0be575e17ea8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\포인터">
+      <UniqueIdentifier>{bdcb9923-16a7-4ce1-8e5b-e68ce651d2c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="study01.cpp">
+      <Filter>소스 파일\변수</Filter>
+    </ClCompile>
+    <ClCompile Include="study02.cpp">
+      <Filter>소스 파일\변수</Filter>
+    </ClCompile>
+    <ClCompile Include="study03.cpp">
+      <Filter>소스 파일\자료형</Filter>
+    </ClCompile>
+    <ClCompile Include="study04.cpp">
+      <Filter>소스 파일\자료형</Filter>
+    </ClCompile>
+    <ClCompile Include="study05.cpp">
+      <Filter>소스 파일\자료형</Filter>
+    </ClCompile>
+    <ClCompile Include="study06.cpp">
+      <Filter>소스 파일\배열</Filter>
+    </ClCompile>
+    <ClCompile Include="study07.cpp">
+      <Filter>소스 파일\배열</Filter>
+    </ClCompile>
+    <ClCompile Include="study08-1.cpp">
+      <Filter>소스 파일\사용자 입력 및 string</Filter>
+    </ClCompile>
+    <ClCompile Include="study09.cpp">
+      <Filter>소스 파일\사용자 입력 및 string</Filter>
+    </ClCompile>
+    <ClCompile Include="study08-2.cpp">
+      <Filter>소스 파일\사용자 입력 및 string</Filter>
+    </ClCompile>
+    <ClCompile Include="study10.cpp">
+      <Filter>소스 파일\구조체</Filter>
+    </ClCompile>
+    <ClCompile Include="study11.cpp">
+      <Filter>소스 파일\구조체</Filter>
+    </ClCompile>
+    <ClCompile Include="study12.cpp">
+      <Filter>소스 파일\포인터</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
